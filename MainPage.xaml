@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:tc"
+             x:Class="tc.MainPage">
+  <StackLayout Padding="20, 20, 20, 20">
+    <Label Text="Welcome to Temp Converter!"
+         VerticalOptions="Start"
+         HorizontalOptions="Start"
+         FontSize="Large" />
+    <Label Text="Enter the temperature"
+           FontSize="Medium" /> 
+  <Entry x:Name="conversionValue" Keyboard="Numeric" />
+    <Picker x:Name="Conversion" Title="Conversion">
+      <Picker.Items>
+        <x:String>C to F</x:String>
+      <x:String>F to C</x:String>
+      </Picker.Items>
+      <Picker.SelectedIndex>0</Picker.SelectedIndex>
+    </Picker>
+  <Button x:Name="btnConvert" Text="Convert" Clicked="convert_click" />
+      <Label x:Name="txtOutput" Text=""
+           FontSize="Large" />
+  </StackLayout> 
+
+
+
+</ContentPage>
